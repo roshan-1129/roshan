@@ -1,61 +1,114 @@
 /* styles.css */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#joke-container {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#share-container button {
+  margin-top: 15px; /* Added space between the buttons */
+  margin-bottom: 10px; /* Added space between the buttons and the next element */
+}
+
+#share-container button:not(:last-child) {
+  margin-bottom: 10px; /* Space between buttons */
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#setup {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+#punchline {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-style: italic;
+  color: #007BFF;
+}
+
+/* Fade In Animation */
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Fade Out Animation */
+.fade-out {
+  animation: fadeOut 1s ease-in;
+}
+
+/* Slide In Animation */
+.slide-in {
+  animation: slideIn 1s ease-out;
+}
+
+/* Fade In Keyframe */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .container {
-    text-align: center;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    width: 90%;
-    max-width: 400px;
+  to {
+    opacity: 1;
   }
-  
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+}
+
+/* Fade Out Keyframe */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
   }
-  
-  #joke-container {
-    margin-bottom: 20px;
+  to {
+    opacity: 0;
   }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+}
+
+/* Slide In Keyframe */
+@keyframes slideIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
   }
-  
-  button:hover {
-    background-color: #0056b3;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  .hidden {
-    visibility: hidden;
-  }
-  
-  #setup {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  #punchline {
-    font-size: 1.2rem;
-    margin-top: 10px;
-    font-style: italic;
-    color: #007BFF;
-  }
-  
-  
+}

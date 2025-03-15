@@ -5,18 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Random Joke Generator</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <h1>Random Joke Generator</h1>
-    <div id="joke-container">
+    
+    <!-- Joke Difficulty Dropdown -->
+    <label for="joke-difficulty">Select Joke Difficulty:</label>
+    <select id="joke-difficulty">
+      <option value="Easy">Easy</option>
+      <option value="Medium">Medium</option>
+      <option value="Hard">Hard</option>
+    </select>
+
+    <div id="joke-container" class="fade-in">
       <p id="setup"></p>
-      <p id="punchline" class="hidden"></p>
+      <p id="punchline" class="hidden slide-in"></p>
     </div>
+    
     <button id="get-joke">Get a New Joke</button>
+
+    <!-- Share Button -->
+    <div id="share-container">
+      <button id="share-twitter">Share on Twitter</button>
+      <button id="share-facebook">Share on Facebook</button>
+      <button id="copy-joke">Copy Joke</button>
+    </div>
   </div>
-  
+
   <script src="script.js"></script>
 </body>
 </html>
